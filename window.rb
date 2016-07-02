@@ -4,44 +4,44 @@ background blue
    fill black
    oval top: -25 , left: -40, radius: 160
 stack margin: 0, :top => 40 , :left => 20 do
-stroke white
-Master_key = "Admin", "imyourdaddy"
-User_key = "Tester", "Xplatform"
-   @l = button "Login"
-   @l.click do
-    @username, @password = ask("Enter Username: "), ask("Enter Password: ")
-	  if ["#{@username}", "#{@password}"] == "#{Master_key}"||"#{User_key}"
-    alert "Nice Try. It worked!"
-  else
-    alert "Incorrect Username and Password. Please input valid credentials"
-  end
-    end
+   stroke white
+                                             Master_key = "Admin", "imyourdaddy"
+                                             User_key = "Tester", "Xplatform"
+    @l = button "Login"
+      @l.click do
+           @username, @password = ask("Enter Username: "), ask("Enter Password: ")
+	       if ["#{@username}", "#{@password}"] == "#{Master_key}"||"#{User_key}"
+                  alert "Nice Try. It worked!"
+               else
+                  alert "Incorrect Username and Password. Please input valid credentials"
+      end
+end
 flow margin: 0, :top => 80, :left => 20 do
-   @b = button "Enter"
-   @b.click do
-      window1
-	  close
-	         end
-			    end
+    @b = button "Enter"
+     @b.click do
+        window1
+	close
+     end 
+end
 flow margin: 0, :top => 80, :left => 100 do
          button "Leave" do
 	     alert "See ya!"
-		 exit
-				 end
-				 end
-       end
+	     exit
+end
+	 end
+end
 def window1
-window title: "Choose",
-width: 550, height: 150, :resizable => false do
-background black
-   fill indigo
-   oval top: -25 , left: 340, radius: 190
-   oval top: -25 , left: -170, radius: 190
+    window title: "Choose",
+    width: 550, height: 150, :resizable => false do
+    background black
+    fill indigo
+        oval top: -25 , left: 340, radius: 190
+        oval top: -25 , left: -170, radius: 190
 flow margin: 0, :top => 20, :left => 10 do
-                      list_box items: ["Choose an Application", "TSB", "K&K", "KKH", "Britney", "SniperX"],
-                      width: 200 , choose: "Choose an Application" do |list|
-                      @app_name.text = list.text
-					                         end
+           list_box items: ["Choose an Application", "TSB", "K&K", "KKH", "Britney", "SniperX"],
+           width: 200 , choose: "Choose an Application" do |list|
+                 @app_name.text = list.text
+					               end
    											 end
 flow margin: 0, :top => 60, :left => 10 do
                       list_box items: ["Choose a Test Suite", "Astats-Adjust", "IAPs", "GluAnalytics"],
