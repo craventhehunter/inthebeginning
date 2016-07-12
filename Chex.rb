@@ -45,7 +45,7 @@ flow margin: 0, :top => 80, :left => 100 do
 				 end
 def window1
 window title: "Choose",
-width: 550, height: 150, :resizable => false do
+width: 545, height: 150, :resizable => false do
 background black
    fill indigo
    oval top: -25 , left: 340, radius: 190
@@ -70,7 +70,7 @@ flow margin: 0, :top => 20, :left => 380 do
 					  $mp = @mp_name.text
 					                         end
                                                   end
-flow margin: 0, :top => 20, :left => 200 do
+flow margin: 0, :top => 20, :left => 195 do
                       list_box items: ["Choose an Environment", "Production", "Development"],
                       width: 160 , choose: "Choose an Environment" do |list|
                       @env_name.text = list.text
@@ -87,25 +87,39 @@ flow margin: 0, :top => 20, :left => 200 do
 
 def window2
 window title: "Checklist",
-width: 580, height: 780, :resizable => false do
-background firebrick
+width: 580, height: 810, :resizable => false do
+background white
    fill white
-flow margin: 0, :top => 60, :left => 10 do
+flow margin: 0, :top => 20, :left => 195 do
                       list_box items: ["Choose a Test Suite", "Astats-Adjust", "IAPs", "GluAnalytics"],
                       width: 200 , choose: "Choose a Test Suite" do |list|
                       @suite_name.text = list.text
 					  $suite = @suite_name.text
                                                end
                                                end
-										@suite_name = para "No app selected"  #:hidden => true	   
-stack margin: 19, :top => 20, :left => 10 do
-        para strong("1. Connect the device to DDMS and clear all previous logs")
+					
+										@suite_name = para "No app selected"  #:hidden => true	  
+#define a class for the checklist					
+#class Checklist
+#end
+#define pop_checklist_method 
+#if @suite == Astats-Adjust then
+#para
+#elsif $suite == IAPs	
+#para
+#elsif $suite == 
+				
+stack margin: 19, :top => 60, :left => 10 do
+        @one = button "1. Connect the device to DDMS and clear all previous logs" do
+		end
+		end
+		stack margin: 19, :top => 60, :left => 10 do
 	    para strong("2. Launch the ", "#{$env}", "version of: ", "#{$app}")
 	    para strong("3. Naturally progress through and complete the tutorial")
    	    para strong("4. Perform a Home button Interrupt")
 	    para strong("5. Perform a Power button interrupt")
 	    para strong("6. Close the app using the in-game Exit menu")
-	    para strong("7. Re-Launch the app"
+	    para strong("7. Re-Launch the app")
 	    para strong("8. Send a Customer Support message while logged into Facebook")
 				   @facebook_id = edit_line("Facebook ID")
 		para strong("9. Send a Customer Support message while logged into Google+")
@@ -117,13 +131,13 @@ stack margin: 19, :top => 20, :left => 10 do
 		para strong("12. Close and relaunch the app 3 times")
 		para strong("13. Purchase something from the in-game store UI with Hard Currency and Soft Currency")
   end
-stack margin: 19, :top => 660, :left => 10 do
+stack margin: 19, :top => 690, :left => 320 do
                    @s = button "Submit"
 				           @s.click do
                     window3
 					                  end
                                            end
-stack margin: 19, :top => 660, :left => 320 do
+stack margin: 19, :top => 700, :left => 10 do
                   @logfile = edit_line
 				  @u = button "Upload a Log File"
                   @u.click do
