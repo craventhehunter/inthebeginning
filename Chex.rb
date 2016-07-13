@@ -110,9 +110,57 @@ flow margin: 0, :top => 20, :left => 195 do
 #elsif $suite == 
 				
 stack margin: 19, :top => 60, :left => 10 do
-        @one = button "1. Connect the device to DDMS and clear all previous logs" do
+        check_1 = button "#{@check_01}" do
 		end
 		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_2 = button "#{@check_02}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_3 = button "#{@check_03}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_4 = button "#{@check_04}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_5 = button "#{@check_05}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_6 = button "#{@check_06}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_7 = button "#{@check_07}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_8 = button "#{@check_08}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_9 = button "#{@check_09}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_10 = button "#{@check_10}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_11 = button "#{@check_11}" do
+		end
+		end
+stack margin: 19, :top => 60, :left => 10 do
+        check_12 = button "#{@check_12}" do
+		end
+		end		
+stack margin: 19, :top => 60, :left => 10 do
+        check_13 = button "#{@check_13}" do
+		end
+		end		
 		stack margin: 19, :top => 60, :left => 10 do
 	    para strong("2. Launch the ", "#{$env}", "version of: ", "#{$app}")
 	    para strong("3. Naturally progress through and complete the tutorial")
