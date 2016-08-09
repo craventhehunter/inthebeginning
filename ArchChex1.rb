@@ -4,7 +4,7 @@ background blue
    fill black
    oval top: -25 , left: -40, radius: 160
 def unpw_flow
-  @master_key = ("Admin"; "imyourdaddy")
+  @master_key = ("Admin"; "PASSWORD")
   @user_key = ("Tester"; "Xplatform")
     @unpw = ask("Enter Username:"), ask("Enter Password:")
 	  if @unpw = "#{@master_key}"
